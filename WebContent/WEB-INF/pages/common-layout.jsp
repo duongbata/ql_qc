@@ -7,8 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><tiles:getAsString name="title" /></title>
-<%-- <tiles:insertAttribute name="styles" />
-<tiles:insertAttribute name="scripts" /> --%>
+<tiles:insertAttribute name="styles" />
+<tiles:insertAttribute name="scripts" />
 </head>
 <body>
 	<div>

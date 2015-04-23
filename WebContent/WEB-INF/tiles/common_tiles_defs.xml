@@ -5,6 +5,8 @@
 <tiles-definitions>
 	<definition name="BASE" template="/WEB-INF/pages/common-layout.jsp">
 		<put-attribute name="header" value="/WEB-INF/pages/header.jsp"/>
+		<put-attribute name="styles" value="/WEB-INF/pages/styles.jsp"/>
+		<put-attribute name="scripts" value="/WEB-INF/pages/scripts.jsp"/>
 	</definition>
 	<definition name="CUSTOMER" extends="BASE">
 		<put-attribute name="title" value="Customer"/>
