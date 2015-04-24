@@ -11,7 +11,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
     <context:component-scan base-package="com.ads.controller"/>
 
 	<mvc:resources mapping="resources/**" location="/WEB-INF/"/>
-	<mvc:annotation-driven />
+	<mvc:annotation-driven/>
 <!-- 	Import file -->
 	<import resource="/spring/tilesContext.xml"/>
 	<import resource="/spring/applicationContext.xml"/>

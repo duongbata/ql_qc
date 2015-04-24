@@ -1,6 +1,13 @@
 package com.ads.bean;
 
-public class UserBean {
+import java.io.Serializable;
+
+public class UserBean implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3392971993592946318L;
+
 	private int id;
 	
 	private String name;
