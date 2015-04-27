@@ -24,4 +24,8 @@
 		<put-attribute name="title" value="User"/>
 		<put-attribute name="body" value="/WEB-INF/pages/user.jsp"/>
 	</definition>
+	<definition name="LOGIN" extends="BASE">
+		<put-attribute name="title" value="Login"/>
+		<put-attribute name="body" value="/WEB-INF/pages/login.jsp"/>
+	</definition>
 </tiles-definitions>

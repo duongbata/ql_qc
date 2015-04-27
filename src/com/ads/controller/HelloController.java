@@ -13,23 +13,26 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.ads.bean.InfoValue;
 import com.ads.bean.UserBean;
 
 @Controller
 @RequestMapping("/welcome/{id}")
+@SessionAttributes("infoValue")
 public class HelloController {
 	
 	@RequestMapping(value={"/","/all"},method=RequestMethod.GET)
-	public String printWelcome(Map<String,Object> model){
-		model.put("message", "Welcome to my life");
+	public String printWelcome(@ModelAttribute InfoValue infoValue, Map<String,Object> model){
+		UserBean user = infoValue.getUserBean();
+		model.put("message", "Welcome to my life, " + user.getName());
 		return "HELLO";
 	}
 	
 	@RequestMapping(value="/{name}",method=RequestMethod.GET)
 	public String welcomeUser(@PathVariable("id") String userId, @PathVariable("name") String userName,
-							  @ModelAttribute("infoObject") InfoValue info,	ModelMap model) {
+							  @ModelAttribute InfoValue info,	ModelMap model) {
 		model.addAttribute("message",userName + userId);
 		List<UserBean> listUser = new ArrayList<UserBean>();
 		UserBean u1 = new UserBean(1, "truongphi");
